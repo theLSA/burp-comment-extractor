@@ -23,11 +23,11 @@ JS注释1：String jsCommentRegex1 = "\\/\\*(\\s|.)*?\\*\\/";
 
 2）自定义tab
 
-![](https://github.com/theLSA/burp-comment-extractor/raw/master/demo/bce01.png)
+![](https://github.com/theLSA/burp-comment-extractor/raw/master/demo/bce04.png)
 
 ![](https://github.com/theLSA/burp-comment-extractor/raw/master/demo/bce02.png)
 
-![](https://github.com/theLSA/burp-comment-extractor/raw/master/demo/bce03.png)
+![](https://github.com/theLSA/burp-comment-extractor/raw/master/demo/bce01.png)
 
 
 

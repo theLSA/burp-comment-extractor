@@ -62,6 +62,8 @@ public class BurpExtender implements IBurpExtender, ITab, IScannerCheck, IExtens
     
     private static IMessageEditorTab markCommentTab;
     
+    ArrayList<String> urlList = new ArrayList<>();
+    
 	@Override
 	public void extensionUnloaded() {
 		// TODO Auto-generated method stub
@@ -94,6 +96,17 @@ public class BurpExtender implements IBurpExtender, ITab, IScannerCheck, IExtens
 			return true;
 		}
 		return false;
+	}
+	
+	
+	public boolean duplicateUrl(String url) {
+		if(urlList.contains(url)) {
+			return true;
+		}
+		else {
+			urlList.add(url);
+			return false;
+		}
 	}
 	
 	
@@ -169,6 +182,11 @@ public class BurpExtender implements IBurpExtender, ITab, IScannerCheck, IExtens
 	
 	
 	public void printfHtmlJsComment(String url) {
+		
+		if(duplicateUrl(url)) {
+			return;
+		}
+		
 		if(htmlCommentMatch != "") {
 			SwingUtilities.invokeLater(() -> {
 				
